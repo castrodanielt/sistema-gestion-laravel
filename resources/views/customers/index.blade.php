@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listado de clientes</title>
-</head>
-<body>
+@extends('layouts.app')
+
+@section('content')
     <a href="{{ route('customers.create') }}">Crear nuevo Cliente</a>
     <table>
         <thead>
@@ -27,6 +22,4 @@
             @endforelse
         </tbody>
     </table>
-
-</body>
-</html>
+@endsection

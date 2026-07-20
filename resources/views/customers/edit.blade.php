@@ -1,3 +1,5 @@
+@extends('layouts.app')
+@section('content')
 <h1>Editar Cliente</h1>
 
 <a href="{{ route('customers.index') }}">Volver al index</a>
@@ -39,3 +41,4 @@
         Actualizar
     </button>
 </form>
+@endsection
