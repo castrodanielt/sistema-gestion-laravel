@@ -1,5 +1,6 @@
 <h1>Nuevo Cliente</h1>
 
+<a href="{{ route('customers.index') }}">Volver al index</a>
 <form action="{{ route('customers.store') }}" method="POST">
     @csrf
 

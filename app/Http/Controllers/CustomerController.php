@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Customer;
 use App\Http\Requests\CustomerRequest;
+use App\Http\Requests\UpdateCustomerRequest;
 
 class CustomerController extends Controller
 {
@@ -35,21 +36,15 @@ class CustomerController extends Controller
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
+    public function edit(Customer $customer){
+        return view('customers.edit',compact('customer'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+    public function update(UpdateCustomerRequest $request, Customer $customer)
     {
-        //
-    }
+        $customer->update($request->validated());
+        return redirect()->route('customers.index');
+    }   
 
     /**
      * Remove the specified resource from storage.
