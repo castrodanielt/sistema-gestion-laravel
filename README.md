@@ -13,6 +13,7 @@ Proyecto orientado a la gestión de clientes, productos y procesos comerciales
 
 ## Funcionalidades
 - Entidad Cliente
+- CustomerController base
 
 ## Estado
 En desarrollo
