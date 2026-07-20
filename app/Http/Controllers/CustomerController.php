@@ -11,23 +11,23 @@ class CustomerController extends Controller
     public function index()
     {   
         $customers = Customer::all();
-        return view('index',compact('customers'));
+        return view('customers.index',compact('customers'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
-        //
+        return view('customers.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        //
+        Customer::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+        ]);
+
+        return redirect()->route('customers.index');
     }
 
     /**

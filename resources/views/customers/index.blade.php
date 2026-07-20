@@ -6,6 +6,7 @@
     <title>Listado de clientes</title>
 </head>
 <body>
+    <a href="{{ route('customers.create') }}">Crear nuevo Cliente</a>
     <table>
         <thead>
             <tr>
