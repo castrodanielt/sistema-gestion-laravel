@@ -11,6 +11,9 @@ Proyecto orientado a la gestión de clientes, productos y procesos comerciales
 - Composer
 - XAMPP
 
+## Funcionalidades
+- Entidad Cliente
+
 ## Estado
 En desarrollo
 
