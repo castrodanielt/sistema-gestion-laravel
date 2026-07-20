@@ -13,7 +13,9 @@ Proyecto orientado a la gestión de clientes, productos y procesos comerciales
 
 ## Funcionalidades
 - Entidad Cliente
-- CustomerController base
+- CustomerController
+    - Listado de Customers
+    - Creación de Customers
 
 ## Estado
 En desarrollo
