@@ -16,6 +16,8 @@ Proyecto orientado a la gestión de clientes, productos y procesos comerciales
 - CustomerController
     - Listado de Customers
     - Creación de Customers
+    - Editado de Customers
+    - Soft Delete de Customers
 
 ## Estado
 En desarrollo
