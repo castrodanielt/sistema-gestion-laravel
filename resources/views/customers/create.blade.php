@@ -3,6 +3,16 @@
 <h1>Nuevo Cliente</h1>
 
 <a href="{{ route('customers.index') }}">Volver al index</a>
+@if($errors->any())
+<div>
+    <ul>
+        @foreach($errors->all() as $error)
+        <li>{{$error}}</li>
+        @endforeach
+    </ul>
+</div>
+@endif
+
 <form action="{{ route('customers.store') }}" method="POST">
     @csrf
 
@@ -11,6 +21,7 @@
     <input
         type="text"
         name="name"
+        value ="{{old('name')}}"
     >
 
     <br><br>
@@ -20,6 +31,7 @@
     <input
         type="email"
         name="email"
+        value ="{{old('email')}}"
     >
 
     <br><br>
@@ -29,6 +41,7 @@
     <input
         type="text"
         name="phone"
+        value ="{{old('phone')}}"
     >
 
     <br><br>

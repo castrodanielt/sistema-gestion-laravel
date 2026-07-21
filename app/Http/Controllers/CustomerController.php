@@ -25,7 +25,8 @@ class CustomerController extends Controller
     {
         Customer::create($request->validated());
 
-        return redirect()->route('customers.index');
+        return redirect()->route('customers.index')
+        ->with('success','Cliente registrado exitosamente');
     }
 
     /**
@@ -43,7 +44,8 @@ class CustomerController extends Controller
     public function update(UpdateCustomerRequest $request, Customer $customer)
     {
         $customer->update($request->validated());
-        return redirect()->route('customers.index');
+        return redirect()->route('customers.index')
+        ->with('success','Cliente editado exitosamente');;
     }   
 
 
@@ -51,6 +53,7 @@ class CustomerController extends Controller
     {
         $customer->delete();
 
-        return redirect()->route('customers.index');
+        return redirect()->route('customers.index')
+        ->with('success','Cliente eliminado correctamente');
     }
 }

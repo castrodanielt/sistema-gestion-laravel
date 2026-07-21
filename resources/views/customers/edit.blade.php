@@ -3,6 +3,15 @@
 <h1>Editar Cliente</h1>
 
 <a href="{{ route('customers.index') }}">Volver al index</a>
+@if($errors->any())
+<div>
+    <ul>
+        @foreach($errors->all() as $error)
+        <li>{{$error}}</li>
+        @endforeach
+    </ul>
+</div>
+@endif
 <form action="{{ route('customers.update',$customer) }}" method="POST">
     @csrf
     @method('PUT')
@@ -12,7 +21,7 @@
     <input
         type="text"
         name="name"
-        value="{{$customer->name}}"
+        value="{{old('name'),$customer->name}}"
     >
 
     <br><br>
@@ -22,7 +31,7 @@
     <input
         type="email"
         name="email"
-        value="{{$customer->email}}"
+        value="{{old('email'),$customer->email}}"
     >
 
     <br><br>
@@ -32,7 +41,7 @@
     <input
         type="text"
         name="phone" 
-        value="{{$customer->phone}}"
+        value="{{old('phone'),$customer->phone}}"
     >
 
     <br><br>
