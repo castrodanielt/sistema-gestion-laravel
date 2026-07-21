@@ -12,7 +12,7 @@
     <input
         type="text"
         name="name"
-        value="{{$customer.name}}"
+        value="{{$customer->name}}"
     >
 
     <br><br>
@@ -22,7 +22,7 @@
     <input
         type="email"
         name="email"
-        value="{{$customer.email}}"
+        value="{{$customer->email}}"
     >
 
     <br><br>
@@ -32,7 +32,7 @@
     <input
         type="text"
         name="phone" 
-        value="{{$customer.phone}}"
+        value="{{$customer->phone}}"
     >
 
     <br><br>

@@ -8,6 +8,7 @@
             <th>Nombre</th>
             <th>Email</th>
             <th>Telefono</th>
+            <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -16,6 +17,15 @@
                 <td>{{ $customer->name }}</td>
                 <td>{{ $customer->email }}</td>
                 <td>{{ $customer->phone }}</td>
+                <td>
+                    <a href="{{ route('customers.edit',$customer)  }}">Editar</a> | 
+                    <form action="{{route('customers.destroy',$customer)}}" method="post">
+                        @csrf
+                        @method('DELETE')
+                        <input type="submit" value="DELETE">
+
+                    </form>
+                </td>
             </tr>
             @empty
                 <p>No hay registros</p>
